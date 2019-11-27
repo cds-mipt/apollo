@@ -28,7 +28,7 @@
 # whether to send message for visualization.
 # type: bool
 # default: false
---obs_enable_visualization=false
+--obs_enable_visualization=true
 
 # where to save screenshots of visualization
 # type: string
@@ -51,7 +51,7 @@
 # sensor to novatel frame id.
 # type: string
 # default:
---obs_sensor2novatel_tf2_frame_id=novatel
+--obs_sensor2novatel_tf2_frame_id=atlans
 
 # novatel to world frame id.
 # type: string
@@ -61,7 +61,7 @@
 # novatel to world child frame id.
 # type: string
 # default:
---obs_novatel2world_tf2_child_frame_id=novatel
+--obs_novatel2world_tf2_child_frame_id=atlans
 
 # query Cyber TF buffer size in second.
 # type: double
@@ -84,4 +84,4 @@
 --obs_max_local_pose_extrapolation_latency=0.15
 
 --config_manager_path=./
---start_visualizer=false
+--start_visualizer=true
