@@ -28,7 +28,7 @@
 # whether to send message for visualization.
 # type: bool
 # default: false
---obs_enable_visualization=true
+--obs_enable_visualization=false
 
 # where to save screenshots of visualization
 # type: string
@@ -66,7 +66,7 @@
 # query Cyber TF buffer size in second.
 # type: double
 # default: 0.01
---obs_tf2_buff_size=0.01
+--obs_tf2_buff_size=1.0
 
 # enabled state of local pose extrapolation when failed to query pose
 # type: bool

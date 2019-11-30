@@ -1,0 +1,50 @@
+vertical_model{
+    model_name: "./";
+    model_type: "CaffeNet";
+    input_blob: "input_1";
+    output_blob: "fc5_activation";
+    weight_file: "vertical_resnetm_70x70_6cls/Best_ResNetM_50_epochs_TrafficLights.caffemodel";
+    proto_file: "vertical_resnetm_70x70_6cls/Best_ResNetM_50_epochs_TrafficLights.prototxt";
+    classify_threshold: 0.0;
+    classify_resize_width: 70;
+    classify_resize_height: 70;
+    mean_r: 0;
+    mean_g: 0;
+    mean_b: 0;
+    is_bgr: true;
+    scale: 0.00392
+}
+
+quadrate_model{
+    model_name: "./";
+    model_type: "CaffeNet";
+    input_blob: "data_org";
+    output_blob: "prob";
+    weight_file: "quadrate/baidu_iter_200000.caffemodel";
+    proto_file: "quadrate/deploy.prototxt";
+    classify_threshold: 0.5;
+    classify_resize_width: 64;
+    classify_resize_height: 64;
+    mean_r: 69.06;
+    mean_g: 66.58;
+    mean_b: 66.56;
+    is_bgr: true;
+    scale: 0.01
+}
+
+horizontal_model{
+    model_name: "./";
+    model_type: "CaffeNet";
+    input_blob: "data_org";
+    output_blob: "prob";
+    weight_file: "horizontal/baidu_iter_200000.caffemodel";
+    proto_file: "horizontal/deploy.prototxt";
+    classify_threshold: 0.5;
+    classify_resize_width: 96;
+    classify_resize_height: 32;
+    mean_r: 69.06;
+    mean_g: 66.58;
+    mean_b: 66.56;
+    is_bgr: true;
+    scale: 0.01
+}

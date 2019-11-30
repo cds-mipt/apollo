@@ -10,7 +10,7 @@ detector_param{
     plugin_param{
         name: "TrafficLightRecognition"
         root_dir:"/apollo/modules/perception/production/data/perception/camera/models/traffic_light_recognition"
-        config_file:"recognition.pt"
+        config_file:"recognition_resnetm_32x96_4cls.pt"
         }
 }
 tracker_param{
